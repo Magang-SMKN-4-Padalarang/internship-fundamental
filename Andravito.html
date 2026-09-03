@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<Html lang="en">
+    <head>
+        <title>Biodata Andravito</title>
+        <style>
+            @keyframes fadein {
+                from {
+                    opacity : 0;
+                    transform: translateY(20px)
+                }
+                to {
+                    opacity : 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .fadeinanimation{
+                animation: fadein 1.0s ease;
+            }
+
+            .btn-light:hover{
+                background-color: rgb(84, 72, 72) !important;
+                color: #ffffff !important;
+                transform: translateY(-2px);
+            }
+
+            .submitbutton{
+                display: inline-block;
+                transition: all 0.3s ease-in-out !important;
+            }
+
+            .submitbutton:hover{
+                background-color: rgb(84, 72, 72) !important;
+                color: #ffffff !important;
+                transform: translateY(-2px) !important;
+            }
+
+            .image:hover{
+                transform: translateY(-2px);
+            }
+
+            .image{
+                transition: all 0.3s ease-in-out;
+            }
+
+            .btn-light{
+                transition: all 0.3s ease-in-out !important;
+            }
+
+            .containerForm {
+                max-width: 300px;
+                padding: 20px;
+                color: black;
+            }
+
+            .containerForm div, .formtext, form{
+                text-align: center;
+                justify-content: center;
+            }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+
+    <body class="bg-secondary">
+        <div class="container-lg shadow-lg p-5 my-0 bg-dark text-white rounded fadeinanimation">
+            <section class="p-5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsYYYmIOuieWvw2LUapfA7Catq3e-NyzpWMPjVoZ32pQ&s=10" 
+                class="rounded-circle img-fluid mx-auto d-block m-3 image" alt="profile-photo" width="128" height="128">
+            <h2 class="text-center">Andravito Brilian Satrya</h2>
+            <p class="text-center h3">Developer</p>
+            <p class="text-center h5">Halo! saya merupakan lulusan SMK yang memiliki ketertarikan pada Web developement dan Data entry</p>
+            <div class = "text-center my-3">
+                    <a class="p-1 focus-visible" href="https://www.instagram.com/andravito09/">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkOp81SYu-6ByvF1eFjQRl3E0OKM0ffvuhmxi1YkHwWqJQuJIsRWhQTrg&s=10" alt="ikon IG" width="48px" height="48px">
+                   </a>
+                    <a class = "p-1" href="https://wa.me/62895321559367">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoPHMHbwhiPdAyCWBOYv_GFE2BfFeirqLghWcUvXpKvQ&s=10" alt="ikon WA" width="48px" height="48px">
+                    </a>
+                </div>
+            </section>
+
+            <section class="p-5">
+                <h2>Riwayat Pendidikan</h2>
+                <table class="table table-bordered table-dark">
+                    <thead>
+                        <tr>
+                            <th>Sekolah</th>
+                            <th>Tahun</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SMKN 4 Padalarang</td>
+                            <td>2024-2027</td>
+                        </tr>
+                        <tr>
+                            <td>SMP Darul Falah 1 Cihampelas</td>
+                            <td>2021-2024</td>
+                        </tr>
+                        <tr>
+                            <td>SDN 1 Padalarang</td>
+                            <td>2015-2021</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="p-5 mb-0">
+                <h2 class="p-2">Hobi</h2>
+                    <p class="h5">1. Mendengarkan Musik</p>
+                    <p class="h5">2. Bermain Gitar</p>
+                    <p class="h5">3. Membaca Novel</p>
+            </section>
+
+            <section class="p-5 my-0">
+                <h2 class="p-2">Interaksi</h2>
+                <p>Tekan tombol di bawah ini</p>
+                <p class="text-center h3 m-5" id="pesan"></p>
+                <button type="button" class="btn btn-light" onclick="halo()">Klik</button>
+                <button type="button" class="btn btn-light mx-5" onclick="popup()">Pesan Alert</button>
+            </section>
+
+            <section class="p-5">
+                <div class="containerForm bg-light rounded">
+                <h2 class="p-2 formtext">Form</h2>
+                <form action="">
+                    <div class="mb-5">
+                        <label for="Nama">Nama</label><br>
+                        <input type="text"><br>
+                    </div>
+                    <div class="mb-5">
+                        <label for="Password">Password</label><br>
+                        <input type="password"><br>
+                    </div>
+                    <input type="submit" class="btn btn-secondary submitbutton">
+                </form>
+                </div>
+            </section>
+        </div>
+
+        <script>
+            function halo(){
+                const jam = new Date().getHours();
+                const sapaan= document.getElementById("pesan");
+
+                if (jam < 11){
+                    sapaan.innerHTML= "Selamat Pagi!";
+                }else if (jam < 15){
+                    sapaan.innerHTML= "Selamat Siang!";
+                }else if (jam < 18){
+                    sapaan.innerHTML= "Selamat Sore!";
+                }else{
+                    sapaan.innerHTML= "Selamat Malam!";
+                }
+
+            }
+
+            function popup(){
+                alert("ini adalah pesan alert");
+            }
+
+        </script>
+    </body>
+</Html>
