@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Biodata</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    
+    body {
+      text-align: center;
+      background-color: rgb(34, 35, 36);
+      font-family: 'Verdana', sans-serif;
+      color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #ffffff;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 40%;
+      max-width: 160px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: top;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .biodata-item {
+      margin: 0;
+      padding: 16px 0;
+      text-align: center;
+      border-bottom: 1px solid #444;
+    }
+
+    .biodata-item:last-child {
+      border-bottom: none;
+    }
+
+    .biodata-item:first-of-type {
+      border-bottom: none;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #e6e1f0;
+      margin-bottom: 6px;
+    }
+
+    .value {
+      line-height: 1.5;
+      color: #f0f0f0;
+    }
+
+    .riwayat-list {
+      display: inline-block;
+      text-align: left;
+    }
+
+    .photo-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 15px 0;
+    }
+
+    .photo-row img {
+      width: 90px;
+      max-width: none;
+      margin: 0;
+    }
+
+    .biodata-card {
+      position: relative;
+    }
+
+    .btn-tema {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-tema:hover {
+      background-color: #341f97;
+    }
+
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+      color: #ff89b0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .instagram-link i {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="biodata-card">
+
+    <button class="btn-tema" onclick="gantiTemaaa()">Ganti Tema</button>
+
+    <h1>Biodata Diri</h1>
+
+    <img src="images/image.jpg" alt="Foto Saya">
+
+    <div class="biodata-item">
+      <div class="label">Tentang Saya:</div>
+      <div class="value">Pelajar SMK yang menyukai dunia sepak bola, baik sebagai pemain maupun penikmat pertandingan.</div>
+    </div>
+
+    <div class="biodata-item">
+      <div class="label">Riwayat Pendidikan:</div>
+      <div class="riwayat-list">
+        <div class="value">SDN 2 Curug Agung 2015-2021</div>
+        <div class="value">SMPN 1 Ngamprah 2021-2024</div>
+        <div class="value">Sekolah Sepak Bola 2015-2025</div>
+      </div>
+    </div>
+
+    <div class="photo-row">
+      <img src="images/football.jpg" alt="Sepak Bola">
+      <img src="images/running.jpg" alt="Long Run">
+      <img src="images/mancing.jpg" alt="Mancing">
+    </div>
+
+    <div class="biodata-item">
+      <div class="label">Hobi:</div>
+      <div class="value">Bermain Sepak Bola</div>
+      <div class="value">Long Run</div>
+      <div class="value">Mancing</div>
+    </div>
+
+    <div class="photo-row">
+      <img src="images/oasis.jpg" alt="Oasis">
+    </div>
+
+    <div class="biodata-item">
+      <div class="label">Favorit Song:</div>
+      <div class="value">Wonderwall - Oasis</div>
+    </div>
+
+    <div class="biodata-item">
+      <div class="label">Skill:</div>
+      <div class="value">-Video Editing / Kameramen</div>
+      <div class="value">-Dribbling </div>
+    </div>
+
+    <a class="instagram-link" href="https://instagram.com/ziklarbi" target="_blank">
+      <i class="fa-brands fa-instagram"></i> @ziklarbi
+    </a>
+
+  </div>
+
+   <script>
+    const warnaGelap = ["#1a1a1a", "#16213e"];
+    let indexWarna = 0;
+
+    function gantiTemaaa() {
+    indexWarna = (indexWarna + 1) % warnaGelap.length;
+    document.body.style.backgroundColor = warnaGelap[indexWarna];
+  }
+ </script>
+
+</body>
+</html>
