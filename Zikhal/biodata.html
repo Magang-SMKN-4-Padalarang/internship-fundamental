@@ -5,317 +5,229 @@
   <title>Biodata</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-
- <style>
-
-    :root {
-      --bg-color: rgb(34, 35, 36);
-      --text-color: #f0f0f0;
-      --heading-color: #ffffff;
-      --label-color: #e6e1f0;
-      --border-color: #444;
-      --btn-bg: #ffffff;
-      --btn-text: #000000;
-      --btn-hover-bg: #341f97;
-      --btn-hover-text: #ffffff;
-      --link-color: #ff89b0;
-    }
-
-    [data-theme="light"] {
-      --bg-color: #f5f5f7;
-      --text-color: #2b2b2d;
-      --heading-color: #1a1a1a;
-      --label-color: #5b3ea6;
-      --border-color: #ddd;
-      --btn-bg: #1a1a1a;
-      --btn-text: #ffffff;
-      --btn-hover-bg: #5b3ea6;
-      --btn-hover-text: #ffffff;
-      --link-color: #d6336c;
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
     }
 
     body {
-      text-align: center;
-      background-color: var(--bg-color);
-      font-family: 'Verdana', sans-serif;
-      color: var(--text-color);
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
+
+    .header {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      min-height: 100vh;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      padding: 16px 24px;
+      border-bottom: 1px solid #ddd;
     }
 
-    h1 {
-      color: var(--heading-color);
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
-
-    img {
-      width: 40%;
-      max-width: 160px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      object-position: top;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      border-radius: 50%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .biodata-item {
+    .header h3 {
       margin: 0;
-      padding: 16px 0;
-      text-align: center;
-      border-bottom: 1px solid var(--border-color);
+      font-size: 15px;
+      letter-spacing: 0.5px;
     }
 
-    .biodata-item:last-child {
-      border-bottom: none;
-    }
-
-    .biodata-item:first-of-type {
-      border-bottom: none;
-    }
-
-    .label {
-      font-weight: bold;
-      color: var(--label-color);
-      margin-bottom: 6px;
-    }
-
-    .value {
-      line-height: 1.5;
-      color: var(--text-color);
-    }
-
-    .nama-saya {
-      font-size: 22px;
-      font-weight: bold;
-      color: var(--heading-color);
-      margin-top: 8px;
-    }
-
-    .riwayat-list {
-      display: inline-block;
-      text-align: left;
-    }
-
-    .photo-row {
+    .header-actions {
       display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin: 15px 0;
+      gap: 8px;
     }
 
-    .photo-row img {
-      width: 90px;
-      max-width: none;
-      margin: 0;
-      border-radius: 12px;
-    }
-
-    .biodata-card {
-      position: relative;
-    }
-
-    audio {
-      width: 50%;
-      border-radius: 50px;
-    }
-
-    [data-theme="dark"] audio,
-    :root:not([data-theme="light"]) audio {
-      filter: invert(1) hue-rotate(180deg);
-    }
-
-    .btn-tema {
-      position: absolute;
-      bottom: 16px;
-      left: 16px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      background-color: var(--btn-bg);
-      color: var(--btn-text);
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .btn-tema:hover {
-      background-color: var(--btn-hover-bg);
-      color: var(--btn-hover-text);
-    }
-
-    .instagram-link {
+    .btn-kecil {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      margin-top: 8px;
-      color: var(--link-color);
+      gap: 6px;
+      padding: 8px 14px;
+      border: 1px solid #999;
+      border-radius: 6px;
+      background-color: #ffffff;
+      color: #1a1a1a;
       text-decoration: none;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-kecil:hover {
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      gap: 24px;
+      max-width: 800px;
+      margin: 24px auto;
+      padding: 0 16px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .kolom-kiri {
+      flex: 1;
+      min-width: 220px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 24px 16px;
+      background-color: #ffffff;
+    }
+
+    .kolom-kiri img {
+      width: 110px;
+      height: 110px;
+      border-radius: 8px;
+      object-fit: cover;
+      object-position: top;
+      margin: 0 auto 16px auto;
+      display: block;
+    }
+
+    .nama-siswa {
       font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 4px;
     }
 
-    .instagram-link i {
-      font-size: 20px;
+    .kelas-siswa {
+      color: #666;
+      font-size: 14px;
     }
 
-    .tiktok-link {
-     display: inline-flex;
-     align-items: center;
-     gap: 8px;
-     margin-top: 20px;
-     color: #69C9D0;
-     text-decoration: none;
-     font-weight: bold;
+    .kolom-kanan {
+      flex: 2;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    .tiktok-link i {
-     font-size: 20px;
+    .kolom-kanan section {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 16px 20px;
+      background-color: #ffffff;
     }
 
-    .whatsapp-link {
-     display: inline-flex;
-     align-items: center;
-     gap: 8px;
-     margin-top: 8px;
-     color: #25D366;
-     text-decoration: none;
-     font-weight: bold;
+    .kolom-kanan h4 {
+      margin: 0 0 8px 0;
+      font-size: 14px;
+      letter-spacing: 0.5px;
     }
 
-    .whatsapp-link i {
-     font-size: 20px;
+    .kolom-kanan p {
+      margin: 0;
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #1a1a1a;
     }
 
+    .data-diri-table {
+      font-size: 13.5px;
+      border-collapse: collapse;
+    }
+
+    .data-diri-table td {
+      padding: 3px 0;
+      vertical-align: top;
+      color: #1a1a1a;
+    }
+
+    .data-diri-table td.label {
+      width: 90px;
+      white-space: nowrap;
+    }
+
+    .data-diri-table td.titik-dua {
+      width: 14px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      padding: 20px 0;
+    }
   </style>
 </head>
 <body>
 
-  <div class="biodata-card">
-
-    <button class="btn-tema" id="btnTema" onclick="gantiTemaaa()">
-      <span id="labelTema">Dark Mode</span>
-    </button>
-
-    <h1>Biodata Diri</h1>
-
-    <a href="images/image.jpg" class="glightbox">
-      <img src="images/image.jpg" alt="Foto Saya">
-    </a>
-
-    <div class="nama-saya">Zikhal Syabil Arabi</div>
-
-    <div class="biodata-item">
-      <div class="value">Pelajar SMK yang menyukai dunia sepak bola, baik sebagai pemain maupun penikmat pertandingan.</div>
-    </div>
-
-    <div class="biodata-item">
-      <div class="label">Riwayat Pendidikan:</div>
-      <div class="riwayat-list">
-        <div class="value">SDN 2 Curug Agung 2015-2021</div>
-        <div class="value">SMPN 1 Ngamprah 2021-2024</div>
-        <div class="value">Sekolah Sepak Bola 2015-2025</div>
-      </div>
-    </div>
-
-    <div class="photo-row">
-      <a href="images/football.jpg" class="glightbox">
-        <img src="images/football.jpg" alt="Sepak Bola" />
-      </a>
-      <a href="images/running.jpg" class="glightbox">
-        <img src="images/running.jpg" alt="Long Run" />
-      </a>
-      <a href="images/mancing.jpg" class="glightbox">
-        <img src="images/mancing.jpg" alt="Mancing" />
+  <div class="header">
+    <h3>WEBSITE PROFIL SISWA</h3>
+    <div class="header-actions">
+      <a href="../index.html" class="btn-kecil">
+        <i class="fa-solid fa-arrow-left"></i> Kembali ke Home
       </a>
     </div>
+  </div>
 
-    <div class="biodata-item">
-      <div class="label">Hobi:</div>
-      <div class="value">Bermain Sepak Bola</div>
-      <div class="value">Long Run</div>
-      <div class="value">Mancing</div>
-    </div>
+  <div class="container">
 
-    <div class="photo-row">
-      <a href="images/oasis.jpg" class="glightbox">
-        <img src="images/oasis.jpg" alt="Oasis">
+    <div class="kolom-kiri">
+      <a href="images/image.jpg" class="glightbox">
+        <img src="images/image.jpg" alt="Foto Saya">
       </a>
+      <div class="nama-siswa">Zikhal Syabil Arabi</div>
+      <div class="kelas-siswa">XII PPLG A</div>
     </div>
 
-    <div class="biodata-item">
-      <div class="label">Favorit Song:</div>
-      <div class="value">Wonderwall - Oasis</div>
-      <audio controls>
-                    <source src="song/Oasis - Wonderwall.mp3">
-                </audio>
+    <div class="kolom-kanan">
+
+      <section>
+        <h4>TENTANG SAYA</h4>
+        <p>Haii, nama saya Zikhal Syabil Arabi. Saya adalah pelajar SMK yang menyukai dunia sepak bola, baik sebagai pemain maupun penikmat pertandingan, saya juga menekuni bidang videografi dan kameramen.</p>
+      </section>
+
+      <section>
+        <h4>DATA DIRI</h4>
+        <table class="data-diri-table">
+          <tr>
+            <td class="label">Nama</td>
+            <td class="titik-dua">:</td>
+            <td>Zikhal Syabil Arabi</td>
+          </tr>
+          <tr>
+            <td class="label">Kelas</td>
+            <td class="titik-dua">:</td>
+            <td>XII PPLG A</td>
+          </tr>
+          <tr>
+            <td class="label">Umur</td>
+            <td class="titik-dua">:</td>
+            <td>17 Tahun</td>
+          </tr>
+          <tr>
+            <td class="label">Alamat</td>
+            <td class="titik-dua">:</td>
+            <td>Padalarang, Kabupaten Bandung Barat</td>
+          </tr>
+          <tr>
+            <td class="label">Hobi</td>
+            <td class="titik-dua">:</td>
+            <td>Sepak Bola, Long Run, Mancing</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h4>CITA-CITA</h4>
+        <p>Saya ingin menjadi Video Editor Profesional.</p>
+      </section>
+
     </div>
-
-    <div class="photo-row">
-      <a href="images/editor.jpg" class="glightbox">
-        <img src="images/editor.jpg" alt="Editor" onerror="this.alt='Gambar tidak ditemukan: images/editor.jpg'; this.style.border='2px dashed red';">
-      </a>
-      <a href="images/ucok.jpg" class="glightbox">
-        <img src="images/ucok.jpg" alt="Ucok" onerror="this.alt='Gambar tidak ditemukan: images/ucok.jpg'; this.style.border='2px dashed red';">
-      </a>
-    </div>
-
-    <div class="biodata-item">
-      <div class="label">Skill:</div>
-      <div class="value">Video Editing / Kameramen</div>
-    </div>
-
-    <a class="instagram-link" href="https://www.instagram.com/ziklarbii?igsi=MWYyNnJ1cmUzZm10eQ==" target="_blank">
-    <i class="fa-brands fa-instagram"></i> @ziklarbii
-    </a>
-
-    <a class="tiktok-link" href="https://www.tiktok.com/@kaljuttt29?_r=1&_t=ZS-99RKDabfhIt" target="_blank">
-    <i class="fa-brands fa-tiktok"></i> @kaljuttt29
-    </a>
-
-    <a class="whatsapp-link" href="https://wa.me/6289546434261" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-    </a>
 
   </div>
-<script type="text/javascript">
-  const lightbox = GLightbox();
-</script>
-<script>
-    function terapkanTema(tema) {
-      if (tema === "light") {
-        document.documentElement.setAttribute("data-theme", "light");
-        document.getElementById("labelTema").textContent = "Light Mode";
-      } else {
-        document.documentElement.setAttribute("data-theme", "dark");
-        document.getElementById("labelTema").textContent = "Dark Mode";
-      }
-    }
 
-    function gantiTemaaa() {
-      const temaSekarang = document.documentElement.getAttribute("data-theme") || "dark";
-      const temaBaru = temaSekarang === "dark" ? "light" : "dark";
-      terapkanTema(temaBaru);
-      localStorage.setItem("tema-biodata", temaBaru);
-    }
+  <footer>
+    © 2023 Zikhal Syabil Arabi
+  </footer>
 
-    (function initTema() {
-      const temaTersimpan = localStorage.getItem("tema-biodata");
-      if (temaTersimpan) {
-        terapkanTema(temaTersimpan);
-      } else {
-        const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-        terapkanTema(prefersLight ? "light" : "dark");
-      }
-    })();
- </script>
+  <script type="text/javascript">
+    const lightbox = GLightbox();
+  </script>
 
 </body>
 </html>
