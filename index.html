@@ -7,11 +7,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <style>
-    .judul-website {
-    font-size: 32px;
-    font-weight: bold;
-    margin: 8px 0 12px 0;
-    }
     * {
       box-sizing: border-box;
     }
@@ -75,6 +70,27 @@
     .hero h1 {
       font-size: 22px;
       margin: 0 0 12px 0;
+    }
+
+    .judul-website-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 8px 0 12px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo-hero {
+      height: 56px;
+      width: auto;
+      display: block;
+    }
+
+    .judul-website {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 0;
     }
 
     .hero p {
@@ -220,7 +236,7 @@
 
   <div class="header">
     <div class="header-left">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcIcfrqbjAKBIyu7P6KFLwv_1td39h4StkNrlNgR-ZPtkLsO3Ab74ihn0&s=10" alt="Logo SMK Negeri 4 Padalarang" class="logo-img">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfXPxuOqVJ6noGoqouxNxLaJr6ql8mJOBUwbyVTcsUwOvakwZjBjLng04c&s=10" alt="Logo Website" class="logo-img">
       <h3>WEBSITE PROFIL SISWA</h3>
     </div>
     <nav>
@@ -230,11 +246,14 @@
     </nav>
   </div>
 
-<div class="hero">
-  <h1>SELAMAT DATANG 👋</h1>
-  <h2 class="judul-website">Website NEPAL-INTERNSHIP FUNDAMENTAL</h2>
-  <p>Silakan pilih salah satu profil di bawah ini</p>
-</div>
+  <div class="hero">
+    <h1>SELAMAT DATANG </h1>
+    <div class="judul-website-row">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcIcfrqbjAKBIyu7P6KFLwv_1td39h4StkNrlNgR-ZPtkLsO3Ab74ihn0&s=10" alt="Logo SMK Negeri 4 Padalarang" class="logo-hero">
+      <h2 class="judul-website">Website NEPAL INTERNSHIP-FUNDAMENTAL</h2>
+    </div>
+    <p>Silakan pilih salah satu profil di bawah ini</p>
+  </div>
 
   <div class="judul-daftar">DAFTAR PROFIL SISWA</div>
 
@@ -250,12 +269,12 @@
     </div>
 
     <div class="kartu-siswa">
-     <a href="Zikhal/biodata.html">
-     <img src="Zikhal/images/amba.jpg" alt="Foto Zikhal" class="galleryPhoto"/>
-    </a>
-     <div class="nama">Zikhal Syabil Arabi</div>
-     <div class="kelas">XII PPLG A</div>
-    <a href="Zikhal/biodata.html" class="btn-lihat">Lihat Profil</a>
+      <a href="Zikhal/biodata.html">
+        <img src="Zikhal/images/amba.jpg" alt="Foto Zikhal" class="galleryPhoto"/>
+      </a>
+      <div class="nama">Zikhal Syabil Arabi</div>
+      <div class="kelas">XII PPLG A</div>
+      <a href="Zikhal/biodata.html" class="btn-lihat">Lihat Profil</a>
     </div>
 
     <div class="kartu-siswa">
