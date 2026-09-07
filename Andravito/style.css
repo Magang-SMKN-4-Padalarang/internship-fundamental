@@ -1,192 +1,163 @@
-:root {
-    --bg-body: #6c757d;
-    --bg-container: #212529;
-    --text-color: #000000;
-    --bg-card: #f8f9fa;
-    --card-text: #000000;
-
-    --bg-button: #ffffff;
-    --text-button: #212529;
-    --bg-button-hover: #e2e6ea;
-    --text-button-hover: #212529;
-
-    --bg-submit-button: #0ece0b;
-    --text-submit-button: #ffffff;
-    --hover-submit-button: #109e0d;
-}
-
+   
 body {
-    background-color: var(--bg-body) !important;
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background: #f1f8f3;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
-.main-container {
-    background-color: var(--bg-container) !important;
-    color: var(--text-color) !important;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 50px;
-    margin-bottom: 50px;
+.page-frame {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 }
-
-.custom-table {
-    color: var(--text-color) !important;
-    border-color: var(--bg-body);
-}
-
-.custom-button {
-    color: var(--text-button) !important;
-    background-color: var(--bg-button) !important;
-    transition: all 0.3s ease-in-out !important;
-}
-
-.custom-button:hover {
-    background-color: var(--bg-button-hover) !important;
-    color: var(--text-button-hover) !important;
-    transform: translateY(-2px) !important;
-}
-
-.submitbutton {
-    background-color: var(--bg-submit-button) !important;
-    color: var(--text-submit-button) !important;
-    display: inline-block;
-    transition: all 0.3s ease-in-out !important;
-}
-
-.submitbutton:hover {
-    background-color: var(--hover-submit-button) !important;
-    transform: translateY(-2px) !important;
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-        transform: translateY(20px)
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fadeinanimation {
-    animation: fadein 1.0s ease;
-}
-
-.image:hover {
-    transform: translateY(-2px);
-}
-
-.image {
-    transition: all 0.3s ease-in-out;
-}
-
-.btn-light {
-    transition: all 0.3s ease-in-out !important;
-}
-
-.containerForm {
-    max-width: 300px;
-    padding: 20px;
-    color: black;
-}
-
-.containerForm .formtext,
-form {
-    text-align: center;
-    justify-content: center;
-    background-color: var(--bg-card) !important;
-    color: var(--card-text) !important;
-}
-
-.galleryPhoto {
-    max-width: 400px;
-    max-height: 400px;
-    padding: 30px
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.musicCard {
-    flex-direction: column;
-    text-align: center;
-}
-
-#theme-switch {
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    border-radius: 50%;
-    background-color: var(--bg-button);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 20px;
-    right: 20px
-}
-
-#theme-switch svg {
-    fill: burlywood;
-}
-
-#theme-switch svg:first-child {
-    display: none;
-}
-
-.lightMode #theme-switch svg:last-child {
-    display: none;
-}
-
-.lightMode #theme-switch svg:first-child {
-    display: block;
-}
-
-#back-button {
-    height: 50px;
-    width: 50px;
-    padding: 0;
-    border-radius: 50%;
-    background-color: var(--bg-button);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 20px;
-    left: 20px
-}
-
-#back-button svg {
-    fill: burlywood;
-}
-
+ 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    border-bottom: 1px solid #eee;
+	width: 100%;
+	height:65px;
+	border-bottom: 1px solid #cfe3d5;
+	background-color: #2e6845;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	box-sizing: border-box;
 }
 
-.header h1 {
-    font-size: 18px;
+.header h2 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0;
+	color: white;
 }
 
-.header a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
+.content {
+	flex: 1;
+    padding: 0;
 }
 
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding : 15px 25px;
-    border-top: 1px solid #eee;
+.halaman-profil {
+	width: 90%;
+	max-width: 1100px;
+	margin: 20px auto;
+	background-color: transparent;
+}
+
+#tentang {
+	padding: 20px;
+}
+
+.profil {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: stretch;
+}
+
+.profil-kiri {
+	width: 35%;
+	text-align: center;
+	padding: 20px;
+}
+
+.profil-kiri img {
+	width: 260px;
+	height: 300px;
+	object-fit: cover;
+	object-position: top;
+	border: 3px solid #2e6845;
+	border-radius: 6px;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+	box-shadow: 0 4px 10px #2e684555;
+}
+
+.profil-kiri h2{
+	font-size: 26px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	color: #2e6845;
+}
+
+.profil-kiri p {
+	margin: 0;
+	font-size: 16px;
+}
+
+.profil-kanan {
+	width: 65%;
+	padding-left: 20px 30px;
+}
+
+
+.kotak {
+	border: 1px solid #cfe3d5;
+	border-radius: 4px;
+	padding: 30px 35px;
+	margin-bottom: 20px;
+	background-color: white;
+}
+
+.kotak h3 {
+	font-size: 18px;
+	margin-top: 0;
+	margin-bottom: 12px;
+	color: #2e6845;
+}
+
+.kotak p {
+	font-size: 15px;
+	margin: 8px 0;
+}
+
+button {
+	background-color: #2e6845;
+	color: white;
+}
+
+.tombol-kembali {
+    background-color: white;
+    color: #2e6845;
+    border: 1px solid #cfe3d5;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.tombol-kembali:hover {
+    background-color: #e6f2e9;
+}
+
+
+.footer {
+	border-top: 1px solid #cfe3d5;
+	text-align: center;
+	padding: 14px;
+	font-size: 13px;
+	background-color: white;
+	color: #2e6845;
+}
+
+.lightbox {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color:#000000cc;
+	justify-content: center;
+	align-items: center;
+}
+
+.lightbox img {
+	max-width: 90%;
+	max-height: 85%;
+	border: 3px solid white;
 }
