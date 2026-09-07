@@ -19,6 +19,10 @@ body {
     background-color: var(--bg-body) !important;
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-container {
@@ -27,6 +31,10 @@ body {
     transition: background-color 0.3s, color 0.3s;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.main-content{
+    flex: 1;
 }
 
 .custom-table {
@@ -183,10 +191,7 @@ form {
     font-size: 14px;
 }
 
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding : 15px 25px;
-    border-top: 1px solid #eee;
+.footer {
+    font-size: 20px;
+    border-top: 1px solid #d8e7dc;
 }
