@@ -1,363 +1,261 @@
-fit<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<title>Profil Nauraaa</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+	
     <style>
-        body {
+       
+body {
 	margin: 0;
-	font-family: Arial, sans-serif ;
-	background: #9aff95;
+	font-family: Arial, sans-serif;
+	background: #eaf2fc;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.page-frame {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 }
  
-.navbar {
-	width: 220px;
-	height: 100vh;
-	background-color: #ff2596;
-	flex-direction: column;
-	align-items: flex-start;
-	padding: 20px;
-}
-
-.navbar-nav {
-	flex-direction: column;
+.header {
 	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #b9d3f2;
+	background-color: #123a6b;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	box-sizing: border-box;
 }
 
-.content {
-    margin-left: 220px;
-    padding: 40px;
-}
-
-.section {
-	min-height: 100vh;
-	padding: 50px 20px;
-}
-
-section h1 {
-    text-align: center;
-    color: #ff2596;
-    margin-bottom: 30px;
-}
-
-section h2 {
-    text-align: left;
-    color: #ff2596;
-    margin-bottom: 30px;
-}
-
-
-.biodata {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 600px;
-    margin: auto;
-	box-shadow: 0 4px 15px #0000001a;
-}
-
-.biodata p {
-    margin: 15px 0;
-}
-
-.foto {
-	width: 100%;
-	height: 220px;
-	object-fit: cover;
-	border-radius: 15px;
-}
-.sosmed {
-    background: rgb(224, 19, 152);
-    padding: 25px;
-    max-width: 500px;
-    margin: auto;
-    border-radius: 15px;
-}
-
-.sosmed p {
-    margin: 15px 0;
-}
-
-.sosmed img {
-	width: 40px;
-	height: 40px;
-	object-fit: contain;
-}
-
-button {
-	background-color: #ff2596;
+.header h2 {
+	font-size: 13px;
+	font-weight: bold;
+	margin: 0;
 	color: white;
 }
 
-.pilihan-tema {
-    display: none;
-	position: fixed;
-	top: 60px;
-	right: 20px;
-	z-index: 9999;
-    background: white;
-    padding: 10px;
-    border-radius: 15px;
+.content {
+	flex: 1;
+    padding: 0;
 }
 
-.warna {
-	width: 40px;
-	height: 40px;
-	display: inline-block;
-	margin: 5px;
-	border-radius: 8px;
+.halaman-profil {
+	width: 90%;
+	max-width: 1100px;
+	margin: 20px auto;
+	background-color: transparent;
+}
+
+#tentang {
+	padding: 20px;
+}
+
+.profil {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: stretch;
+}
+
+.profil-kiri {
+	width: 35%;
+	text-align: center;
+	padding: 20px;
+}
+
+.profil-kiri img {
+	width: 260px;
+	height: 300px;
+	object-fit: cover;
+	object-position: top;
+	border: 3px solid #123a6b;
+	border-radius: 6px;
+	display: block;
+	margin: 0 auto;
 	cursor: pointer;
+	box-shadow: 0 4px 10px #12326b55;
 }
 
-.pink {
-	background-color: #ff69b4;
+.profil-kiri h2{
+	font-size: 26px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	color: #123a6b;
 }
 
-.kuning {
-	background-color: #eeee9b;
+.profil-kiri p {
+	margin: 0;
+	font-size: 16px;
 }
 
-.hijau {
-	background-color: #9aff95;
+.profil-kanan {
+	width: 65%;
+	padding-left: 20px 30px;
 }
 
-.biru {
-	background-color: #3399ff;
+
+.kotak {
+	border: 1px solid #b9d3f2;
+	border-radius: 4px;
+	padding: 30px 35px;
+	margin-bottom: 20px;
+	background-color: white;
 }
 
-.tombol-tema {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
+.kotak h3 {
+	font-size: 18px;
+	margin-top: 0;
+	margin-bottom: 12px;
+	color: #123a6b;
 }
 
-.glightbox-clean .gclose {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    z-index: 99999 !important;
+.kotak p {
+	font-size: 15px;
+	margin: 8px 0;
 }
 
+button {
+	background-color: #123a6b;
+	color: white;
+}
+
+.tombol-kembali {
+    background-color: white;
+    color: #123a6b;
+    border: 1px solid #b9d3f2;
+    padding: 4px 9px;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 9px;
+}
+
+.tombol-kembali:hover {
+    background-color: #eaf2fc;
+}
+
+
+.footer {
+	border-top: 1px solid #b9d3f2;
+	text-align: center;
+	padding: 8px;
+	font-size: 12px;
+	background-color: white;
+	color: #123a6b;
+}
+
+.lightbox {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color:#000000cc;
+	justify-content: center;
+	align-items: center;
+}
+
+.lightbox img {
+	max-width: 90%;
+	max-height: 85%;
+	border: 3px solid white;
+}
     </style>
 </head>
 <body>
  
-	<nav class="navbar navbar-dark fixed-top">
-			
-		<div class="container-fluid">
- 
-			<a href="#" class="navbar-brand">NAU'S Profile</a>
-			
+	<div class="page-frame">
 
-			<ul class="navbar-nav">
-			
-			 <li class="nav-item">
-		     <a class="nav-link" href="#tentang">Tentang Saya</a>
-	         </li>
-			  <li class="nav-item">
-		     <a class="nav-link" href="#hobi">Hobi</a>
-	         </li>
-			  <li class="nav-item">
-		     <a class="nav-link" href="#project">Project</a>
-	         </li>
-			  <li class="nav-item">
-		     <a class="nav-link" href="#lagu_fav">Lagu Favorit</a>
-	         </li>
-			  <li class="nav-item">
-		     <a class="nav-link" href="#social_media">Sosial Media</a>
-			 </li>
-	         
-			</ul>
-			
-				</div>
-	</nav>
-
-	<button class="tombol-tema" onclick="bukaTema()">Tema</button>
-
-			<div id="pilihanTema" class="pilihan-tema">
-				<div class="warna pink" onclick="gantiTema('pink')"></div>
-				<div class="warna kuning" onclick="gantiTema('kuning')"></div>
-				<div class="warna hijau" onclick="gantiTema('hijau')"></div>
-				<div class="warna biru" onclick="gantiTema('biru')"></div>
-				<button onclick="secret()"><b>tekan ini!</b></button>
-				</div>
+	<header class="header">
+		<h2>WEBSITE PROFIL SISWA</h2>
+		<button class="tombol-kembali" onclick="window.location.href='../index.html'">
+			← Kembali ke Home
+		</button>
+	</header>
+	 
 
 	<main class="content">
+		<div class="halaman-profil">
 
 		<section id="tentang">
-		<h1>Tentang Saya</h1>
-
-			<div class="biodata">
-				<element onclick="biodata"></element>
-				<p><b>Nama</b>  : Naura Fauziah</p>
-				<p><b>kelas</b> : XII RPL A</p>
-				<p><b>Umur</b>  : 16 tahun</p>
-				<p><b>Minat</b> : UI & Game Development</p>
+	
+			<div class="profil">
+				<div class="profil-kiri">
+				<img src="asset/nau.jpeg" alt="Foto Nau" onclick="bukaLightbox()">
+				<h2>Naura Fauziah</h2>
+				<p>XII RPL A</p>
 			</div>
 
-		</section>
-	
-     
-   
-<section id="hobi">
-	<h1>Hobi</h1>
+			<div class="profil-kanan">
+				<div class="kotak">
+				<h3>TENTANG SAYA</h3>
 
-	<div class="row g-4">
-		
-		<div class="col-md-3">
-			<a href="asset/bermain_gitar.jpg" class="glightbox">
-		 <img src="asset/bermain_gitar.jpg" alt="Foto Gitar" class="foto">
-		 </a>
-		 <p class="text-center">Bermain Gitar</p>
-		 </div>
+			<p>
+				Halo, nama saya Naura Fauziah
+				Saya adalah siswi kelas XII.
+				Saya memiliki ketertarikan pada pengembangan Website
+				dan membuat game
+			</p>
+			</div>
 
-		 <div class="col-md-3">
-			<a href="asset/bermain_keyboard.jpg" class="glightbox">
-			<img src="asset/bermain_keyboard.jpg" alt="Foto Keyboard" class="foto">
-			</a>
-			<p class="text-center"> Bermain Keyboard</p>
-		 </div>
+			<div class="kotak">
+				<h3>DATA DIRI</h3>
 
-		 <div class="col-md-3">
-			<a href="asset/mendengarkan musik.jpg" class="glightbox">
-			<img src="asset/mendengarkan musik.jpg" alt="Foto Musik" class="foto">
-			</a>
-			<p class="text-center"> Mendengarkan Musik</p>
-		 </div>
+				<p><b>Nama</b> : Naura Fauziah</p>
+				<p><b>Kelas</b> : XII RPL A</p>
+				<p><b>Umur</b> : 16 tahun</p>
+				<p><b>Alamat</b> : Jl. Ciloa</p>
+				<p><b>Hobi</b> : Bermain gitar, bermain keyboard, mendengarkan musik</p>
 
-		 <div class="col-md-3">
-			<a href="asset/menonton_drakor.jpg" class="glightbox">
-			<img src="asset/menonton_drakor.jpg" alt="Foto Nonton" class="foto">
-			</a>
-			<p class="text-center"> Menonton Drakor</p>
-		 </div>
+			</div>
 
+			<div class="kotak">
+				<h3>CITA-CITA</h3>
+				<p>
+					Saya ingin menjadi Software Developer.
+				</p>
+			</div>
 
-	</div>
-
-  
-</section>
-   
-<section id="project">
-	<h1>Project</h1>
-
-	<div class="row g-4 justify-content-center">
-		
-
-		<div class="col-md-5">
-			<a href="asset/game_detektif_tika.png" class="glightbox">
-			<img src="asset/game_detektif_tika.png" alt="Foto Game" class="foto">
-			</a>
-			<p class="text-center">Game Detektif Tika</p>
 		</div>
-
-		<div class="col-md-5">
-			<a href="asset/web_barbie.png" class="glightbox">
-			<img src="asset/web_barbie.png" alt="Foto WEB" class="foto">
-			</a>
-			<p class="text-center">Website Barbie</p>
-		</div>
-
 	</div>
-</section>
 
-<section id="lagu_fav">
-	<h1>Lagu Favorit</h1>
+	</section>
 
-	<div class="songg">
-	 <h2>Joyride - Cortis</h2>
-    <audio controls>
-      <source src="asset/joyride.mp3" type="audio/mpeg">
-      Browser tidak mendukung audio.
-    </audio>
-
-    <h2>Love - Wave to earth</h2>
-    <audio controls>
-      <source src="asset/love.mp3" type="audio/mpeg">
-      Browser tidak mendukung audio.
-    </audio>
-	</div>
-</section>
- 
-<section id="social_media">
-	<h1>Social Media</h1>
-	
-	<div class="sosmed">
-		<div class = "instagram">
-                    <a href="https://www.instagram.com/n.au.fleur/" target="_blank">
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkOp81SYu-6ByvF1eFjQRl3E0OKM0ffvuhmxi1YkHwWqJQuJIsRWhQTrg&s=10" alt="ikon IG">
-					  <a>@n.au.fleur</a>
-                   </a>
-
-		<div class = "whatsApp">
-                    <a href="https://wa.me/085179842184/" target="_blank">
-                      <img src="https://img.mailinblue.com/2704445/images/content_library/original/694073a5f55d20b7dc274bd8.png" alt="ikon WA">
-					  <a>Naura Fauziah</a>
-                   </a>
-                   
-				   
-                </div>
-		<p><b>No Telp</b> : 0851-7984-2184</p>
-	</div>
-</section>
-
-
+</div>
    </main>
-   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 
+   <footer class="footer">
+	© 2026 Naura Fauziah
+</footer>
+
+</div>
+
+   <div class="lightbox" id="lightbox" onclick="tutupLightbox()">
+	<img src="asset/nau.jpeg" alt="Foto Nau">
+   </div>
+
+   
 <script>
-  
-  function bukaTema() {
-    let pilihan = document.getElementById("pilihanTema");
-
-    if (pilihan.style.display === "block") {
-        pilihan.style.display = "none";
-    } else {
-        pilihan.style.display = "block";
-    }
-}
-
-
-function gantiTema(tema) {
-
-    if (tema === "pink") {
-        document.body.style.background = "#ffd6eb";
-    }
-
-    if (tema === "biru") {
-        document.body.style.background = "#cce7ff";
-    }
-
-    if (tema === "hijau") {
-        document.body.style.background = "#9aff95";
-    }
-
-    if (tema === "kuning") {
-        document.body.style.background = "#eeee9b";
-    }
-}
-	function secret() {
-		if (confirm("Hai hai haii! Ini halaman profil ku!")) {
-	txt = "You pressed OK!";
-	} else {
-	txt = "You pressed Cancel!";
-	}
+	function bukaLightbox() {
+		document.getElementById('lightbox').style.display = 'flex';
 	}
 
-    const lightbox = GLightbox({
-			closeButton: true,
-			touchNavigation: true,
-			loop: true
-		});
-	
- 
+	function tutupLightbox() {
+		document.getElementById('lightbox').style.display = 'none';
+	}
 </script>
-
 </body>
+
 </html>
 
 
