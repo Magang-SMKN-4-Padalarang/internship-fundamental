@@ -1,378 +1,99 @@
 <!DOCTYPE html>
 
-<Html lang="en">
-    <head>
-        <title>Biodata Andravito</title>
-        <style>
-            :root{
-                --bg-body: #6c757d;
-                --bg-container: #212529;
-                --text-color: #ffffff;
-                --bg-card: #f8f9fa;
-                --card-text: #000000;
+<html lang="id">
 
-                --bg-button:#ffffff;
-                --text-button:#212529;
-                --bg-button-hover: #e2e6ea;
-                --text-button-hover: #212529;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Andravito</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+</head>
 
-                --bg-submit-button: #0ece0b;
-                --text-submit-button: #ffffff;
-                --hover-submit-button: #109e0d;
-            }
+<body>
+    <div class="header bg-dark text-white">
+        <h1>WEBSITE PROFIL SISWA</h1>
+        <a class="text-white border p-2" href="/index.html">&larr; Kembali ke Home</a>
+    </div>
 
-            .lightMode{
-                --bg-body: #e9ecef;
-                --bg-container: #ffffff;
-                --text-color: #212529;
-                --bg-card: #f8f9fa;
-                --card-text: #212529;
-                
-                --bg-button:#212529;
-                --text-button:#ffffff;
-                --bg-button-hover: #3d444b;
-                --text-button-hover: #ffffff;
+    <div class="container-lg shadow-lg p-5 main-container rounded fadeinanimation">
 
-                --bg-submit-button: #0ece0b;
-                --text-submit-button: #ffffff;
-                --hover-submit-button: #109e0d;
-            }
-
-            body{
-                background-color: var(--bg-body) !important;
-                color: var(--text-color);
-                transition: background-color 0.3s, color 0.3s;
-            }
-
-            .main-container{
-                background-color: var(--bg-container) !important;
-                color: var(--text-color) !important;
-                transition: background-color 0.3s, color 0.3s;
-            }
-
-            .custom-table{
-                color: var(--text-color) !important;
-                border-color: var(--bg-body);
-            }
-
-            .custom-button{
-                color: var(--text-button) !important;
-                background-color: var(--bg-button) !important;
-                transition: all 0.3s ease-in-out !important;
-            }
-
-           .custom-button:hover{
-                background-color: var(--bg-button-hover) !important;
-                color: var(--text-button-hover) !important;
-                transform: translateY(-2px) !important;
-            }
-
-            .submitbutton{
-                background-color: var(--bg-submit-button) !important;
-                color: var(--text-submit-button) !important;
-                display: inline-block;
-                transition: all 0.3s ease-in-out !important;
-            }
-
-            .submitbutton:hover{
-                background-color: var(--hover-submit-button) !important;
-                transform: translateY(-2px) !important;
-            }
-
-            @keyframes fadein {
-                from {
-                    opacity : 0;
-                    transform: translateY(20px)
-                }
-                to {
-                    opacity : 1;
-                    transform: translateY(0);
-                }
-            }
-
-            .fadeinanimation{
-                animation: fadein 1.0s ease;
-            }
-
-            .image:hover{
-                transform: translateY(-2px);
-            }
-
-            .image{
-                transition: all 0.3s ease-in-out;
-            }
-
-            .btn-light{
-                transition: all 0.3s ease-in-out !important;
-            }
-
-            .containerForm {
-                max-width: 300px;
-                padding: 20px;
-                color: black;
-            }
-
-            .containerForm .formtext, form{
-                text-align: center;
-                justify-content: center;
-                background-color: var(--bg-card) !important;
-                color: var(--card-text) !important;
-            }
-
-            .galleryPhoto{
-                max-width: 400px;
-                max-height:400px;
-                padding: 30px
-            }
-
-            .center{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .musicCard{
-                flex-direction: column;
-                text-align: center;
-            }
-
-            #theme-switch{
-                height: 50px;
-                width: 50px;
-                padding: 0;
-                border-radius: 50%;
-                background-color: var(--bg-button);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: fixed;
-                top: 20px;
-                right: 20px
-            }
-
-            #theme-switch svg{
-                fill: burlywood;
-            }
-
-            #theme-switch svg:first-child{
-                display: none;
-            }
-
-            .lightMode #theme-switch svg:last-child{
-                display: none;
-            }
-
-            .lightMode #theme-switch svg:first-child{
-                display: block;
-            }
-
-            #back-button{
-                height: 50px;
-                width: 50px;
-                padding: 0;
-                border-radius: 50%;
-                background-color: var(--bg-button);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: fixed;
-                top: 20px;
-                left: 20px
-            }
-
-            #back-button svg{
-                fill: burlywood;
-            }
-
-        </style>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-        <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    </head>
-
-    <body>
-        <a href="/index.html">
-            <button id="back-button">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
-            </button>
-        </a>
-
-        <button id="theme-switch">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
-                <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
-                <path d="M565-395q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm-226.5 56.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/>
-            </svg>
-        </button>
-        <div class="container-lg shadow-lg p-5 my-0 main-container rounded fadeinanimation">
-
+    <div class="row g-0">
+        <div class="col-md-3 text-center border-end text-white pe-5">
             <section class="p-5">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsYYYmIOuieWvw2LUapfA7Catq3e-NyzpWMPjVoZ32pQ&s=10" 
-                    class="rounded-circle img-fluid mx-auto d-block m-3 image" alt="profile-photo" width="128" height="128">
-                <h2 class="text-center">Andravito Brilian Satrya</h2>
-                <p class="text-center h3">Developer</p>
-                <p class="text-center h5">Halo! saya merupakan lulusan SMK yang memiliki ketertarikan pada Web developement dan Data entry</p>
-                <div class = "text-center my-3">
-                        <a class="p-1 focus-visible" href="https://www.instagram.com/andravito09/" target="_blank" rel="noopener noreferrer">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkOp81SYu-6ByvF1eFjQRl3E0OKM0ffvuhmxi1YkHwWqJQuJIsRWhQTrg&s=10" alt="ikon IG" width="48px" height="48px">
-                        </a>
-                        <a class = "p-1" href="https://wa.me/62895321559367" target="_blank" rel="noopener noreferrer" >
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoPHMHbwhiPdAyCWBOYv_GFE2BfFeirqLghWcUvXpKvQ&s=10" alt="ikon WA" width="48px" height="48px">
-                        </a>
+                <img src="assets/profile.jpg"
+                    class=" img-fluid mx-auto d-block m-3 image" alt="profile-photo" width="300" height="400">
+                <h3 class="text-center">Andravito Brilian Satrya</h3>
+                <p class="text-center h4">XII PPLG A</p>
+            </section>
+        </div>
+
+        <div class="col-md-9 ps-4">
+            <section class="p-3">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h2 class="card-title fw-bold">Tentang saya</h2>
+                        <p>Halo namaku Andravito Brilian Satrya. Aku memiliki ketertarikan terhadap Data Analyst dan Web
+                            Developer</p>
+                    </div>
                 </div>
             </section>
 
-            <section class="p-5">
-                <h2>Riwayat Pendidikan</h2>
-                <table class="table table-bordered custom-table">
-                    <thead>
-                        <tr>
-                            <th>Sekolah</th>
-                            <th>Tahun</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>SMKN 4 Padalarang</td>
-                            <td>2024-2027</td>
-                        </tr>
-                        <tr>
-                            <td>SMP Darul Falah 1 Cihampelas</td>
-                            <td>2021-2024</td>
-                        </tr>
-                        <tr>
-                            <td>SDN 1 Padalarang</td>
-                            <td>2015-2021</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section class="p-5 mb-0">
-                <h2 class="p-2">Hobi</h2>
-                    <p class="h5">1. Mendengarkan Musik</p>
-                    <p class="h5">2. Bermain Gitar</p>
-                    <p class="h5">3. Membaca Novel</p>
-            </section>
-
-            <section class="p-5 my-0">
-                <h2 class="p-2">Interaksi</h2>
-                <p>Tekan tombol di bawah ini</p>
-                <p class="text-center h3 m-5" id="pesan"></p>
-                <button type="button" class="btn custom-button" onclick="halo()">Klik</button>
-                <button type="button" class="btn custom-button mx-5" onclick="popup()">Pesan Alert</button>
-            </section>
-
-            <section class="p-5">
-                <div class="containerForm bg-light rounded">
-                <h2 class="p-2 formtext">Form</h2>
-                <form action="">
-                    <div class="mb-5">
-                        <label for="Nama">Nama</label><br>
-                        <input type="text"><br>
+            <section class="p-3">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h2 class="card-title fw-bold">Data Diri</h2>
+                        <table class="table table-borderless mb-0">
+                            <tr>
+                                <td style="width: 100px;">Nama</td>
+                                <td>: Andravito Brilian Satrya</td>
+                            </tr>
+                            <tr>
+                                <td>Kelas</td>
+                                <td>: XII PPLG A</td>
+                            </tr>
+                            <tr>
+                                <td>Umur</td>
+                                <td>: 17 Tahun</td>
+                            </tr>
+                            <tr>
+                                <td>Alamat</td>
+                                <td>: Padalarang</td>
+                            </tr>
+                            <tr>
+                                <td>Hobi</td>
+                                <td>: Bermain gitar,Mendengarkan musik, Membaca novel</td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="mb-5">
-                        <label for="Password">Password</label><br>
-                        <input type="password"><br>
-                    </div>
-                    <input type="submit" class="btn submitbutton" value="kirim">
-                </form>
                 </div>
             </section>
 
-            <section class="p-5">
-                <h2 class="p-2">Foto</h2>
-                <div class="photo-row center">
-                    <a href="assets/foto1.jpg" class="glightbox">
-                        <img src="assets/foto1.jpg" alt="Gambar 1" class="galleryPhoto"/>
-                    </a>
-                    <a href="assets/foto2.jpg" class="glightbox">
-                        <img src="assets/foto2.jpg" alt="Gambar 2" class="galleryPhoto"/>
-                    </a>
-                    <a href="assets/foto3.jpg" class="glightbox">
-                        <img src="assets/foto3.jpg" alt="Gambar 3" class="galleryPhoto"/>
-                    </a>
-                </div>
-            </section>
-
-            <section class="p-5">
-                <h2 class="p-2">Musik</h2>
-                <div class="musicCard center">
-                    <div>
-                        <img src="https://i.ytimg.com/vi/k5mX3NkA7jM/maxresdefault.jpg" alt="Mary On a Cross" class="galleryPhoto"/>
-                    </div>
-                    <div>
-                        <h2>Mary On a Cross</h2>
-                        <p>Ghost</p>
-                    </div>
-                    <div class="mb-5">
-                        <audio controls>
-                            <source src="assets/Mary On A Cross.mp3">
-                        </audio>
-                    </div>
-
-                    <div>
-                        <img src="https://i.ytimg.com/vi/4PgOJwUCdIc/hqdefault.jpg" alt="About You" >
-                    </div>
-                    <div>
-                        <h2>About You</h2>
-                        <p>The 1975</p>
-                    </div>
-                    <div>
-                        <audio controls>
-                            <source src="assets/The 1975 - About You (Official).mp3">
-                        </audio>
+            <section class="p-3">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h2 class="card-title fw-bold">Cita-cita</h2>
+                        <p>Saya ingin menjadi Data Analyst</p>
                     </div>
                 </div>
             </section>
 
         </div>
+    </div>
 
-        <script type="text/javascript">
-            const lightbox = GLightbox();
+    </div>
 
-            function halo(){
-                const jam =  new Date().getHours();
-                const sapaan= document.getElementById("pesan");
+    <footer class="py-3 bg-dark">
+        <div class="container">
+            <p class="mt-5 text-center text-white">Copyright 2025 by Andravito. All Rights Reserved</p>
+        </div>
+    </footer>
 
-                if (jam >= 3 && jam < 11){
-                    sapaan.innerHTML= "Selamat Pagi!";
-                }else if (jam >= 11 && jam < 15){
-                    sapaan.innerHTML= "Selamat Siang!";
-                }else if (jam >= 15 && jam < 18){
-                    sapaan.innerHTML= "Selamat Sore!";
-                }else{
-                    sapaan.innerHTML= "Selamat Malam!";
-                }
+    <script type="text/javascript" src="script.js"></script>
+</body>
 
-            }
-
-            function popup(){
-                alert("ini adalah pesan alert");
-            }
-
-            let lightMode = localStorage.getItem('lightMode')
-            const themeSwitch = document.getElementById('theme-switch')
-
-            const enableLightmode = () => {
-                document.body.classList.add('lightMode')
-                localStorage.setItem('lightMode', 'active')
-            }
-
-            const disableLightmode = () => {
-                document.body.classList.remove('lightMode')
-                localStorage.setItem('lightMode', null)
-            }
-
-            if(lightMode === "active") enableLightmode()
-
-            themeSwitch.addEventListener("click", () => {
-                lightMode = localStorage.getItem('lightMode')
-                lightMode !== "active" ? enableLightmode() : disableLightmode()
-            })
-
-        </script>
-    </body>
-</Html>
+</html>

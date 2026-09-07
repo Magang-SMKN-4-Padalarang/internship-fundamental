@@ -1,0 +1,192 @@
+:root {
+    --bg-body: #6c757d;
+    --bg-container: #212529;
+    --text-color: #000000;
+    --bg-card: #f8f9fa;
+    --card-text: #000000;
+
+    --bg-button: #ffffff;
+    --text-button: #212529;
+    --bg-button-hover: #e2e6ea;
+    --text-button-hover: #212529;
+
+    --bg-submit-button: #0ece0b;
+    --text-submit-button: #ffffff;
+    --hover-submit-button: #109e0d;
+}
+
+body {
+    background-color: var(--bg-body) !important;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-container {
+    background-color: var(--bg-container) !important;
+    color: var(--text-color) !important;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.custom-table {
+    color: var(--text-color) !important;
+    border-color: var(--bg-body);
+}
+
+.custom-button {
+    color: var(--text-button) !important;
+    background-color: var(--bg-button) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.custom-button:hover {
+    background-color: var(--bg-button-hover) !important;
+    color: var(--text-button-hover) !important;
+    transform: translateY(-2px) !important;
+}
+
+.submitbutton {
+    background-color: var(--bg-submit-button) !important;
+    color: var(--text-submit-button) !important;
+    display: inline-block;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.submitbutton:hover {
+    background-color: var(--hover-submit-button) !important;
+    transform: translateY(-2px) !important;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeinanimation {
+    animation: fadein 1.0s ease;
+}
+
+.image:hover {
+    transform: translateY(-2px);
+}
+
+.image {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-light {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.containerForm {
+    max-width: 300px;
+    padding: 20px;
+    color: black;
+}
+
+.containerForm .formtext,
+form {
+    text-align: center;
+    justify-content: center;
+    background-color: var(--bg-card) !important;
+    color: var(--card-text) !important;
+}
+
+.galleryPhoto {
+    max-width: 400px;
+    max-height: 400px;
+    padding: 30px
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.musicCard {
+    flex-direction: column;
+    text-align: center;
+}
+
+#theme-switch {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--bg-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px
+}
+
+#theme-switch svg {
+    fill: burlywood;
+}
+
+#theme-switch svg:first-child {
+    display: none;
+}
+
+.lightMode #theme-switch svg:last-child {
+    display: none;
+}
+
+.lightMode #theme-switch svg:first-child {
+    display: block;
+}
+
+#back-button {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--bg-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px
+}
+
+#back-button svg {
+    fill: burlywood;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+    font-size: 18px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding : 15px 25px;
+    border-top: 1px solid #eee;
+}
