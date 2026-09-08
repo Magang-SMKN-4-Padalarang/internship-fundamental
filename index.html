@@ -62,10 +62,28 @@
     }
 
     .judul-website {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
       font-size: 24px;
       font-weight: bold;
       color: #203f2c;
+      text-align: left;
     }
+
+    .judul-website .logo-website {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.judul-website span {
+            display: block;
+        }
+
+
 
     .judul-daftar {
       text-align: center;
@@ -141,6 +159,8 @@
       border-top: 1px solid #d8e7dc;
       background-color: #ffffff;
     }
+
+    
   </style>
 </head>
 
@@ -169,10 +189,10 @@
   <main class="flex-grow-1">
     <div class="hero">
       <h1>SELAMAT DATANG👋</h1>
-      <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap judul-website">
+      <div class="d-flex align-items-center justify-content-center gap-2 judul-website">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcIcfrqbjAKBIyu7P6KFLwv_1td39h4StkNrlNgR-ZPtkLsO3Ab74ihn0&s=10"
-          alt="Logo Nepal" class="logo-img">
+          alt="Logo Nepal" class="logo-website">
         <span>Website NEPAL-INTERNSHIP FUNDAMENTAL</span>
       </div>
 
