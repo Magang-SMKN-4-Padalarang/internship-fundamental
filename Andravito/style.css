@@ -7,11 +7,24 @@ body {
 	min-height: 100vh;
 }
 
-.page-frame {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	flex: 1;
+main{
+	flex: 1
+}
+
+.profil-foto {
+	width: 260px;
+	max-width: 100%;
+	height: 300px;
+	object-fit: cover;
+	object-position: top;
+	border: 3px solid #2e6845;
+	border-radius: 6px;
+	cursor: pointer;
+	box-shadow: 0 4px 10px #2e684555;
+}
+
+.nama{
+	color: #2e6845;
 }
  
 .header {

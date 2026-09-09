@@ -3,75 +3,104 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Profil Andravito</title>
-	<link href="style.css" rel="stylesheet"></link>
+
+	<title>Biodata Andravito</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
-	<div class="page-frame">
 
-	<header class="header">
-		<h2>WEBSITE PROFIL SISWA</h2>
-		<button class="tombol-kembali" onclick="window.location.href='../index.html'">
+	<header class="header py-3">
+		<div class="container-fluid px-4">
+
+			<div class="d-flex justify-content-between align-items-center">
+		<h2 class="mb-0">
+			WEBSITE PROFIL SISWA
+		</h2>
+
+		<button
+		 class="btn btn-light btn-sm" onclick="window.location.href='../index.html'">
 			← Kembali ke Home
 		</button>
+
+    </div>
+	</div>
 	</header>
 	 
 
-	<main class="content">
-		<div class="halaman-profil">
+	<main class="container py-4">
 
 		<section id="tentang">
 	
-			<div class="profil">
-				<div class="profil-kiri">
-				<img src="assets/profile.jpg" alt="Foto Vito" onclick="bukaLightbox()">
-				<h2>Andravito Brilian Satrya</h2>
-				<p>XII PPLG A</p>
+			<div class="row align-items-stretch g-4">
+
+				<div class="col-12 col-md-4 text-center">
+
+				<img src="assets/profile.jpg" 
+				alt="Foto Vito" 
+				class="profil-foto img-fluid"
+				onclick="bukaLightbox()">
+
+				<h2 class="nama mt-3 mb-1">Andravito Brilian Satrya</h2>
+
+				<p class="mb-0">XII PPLG A</p>
+
+				</div>
+		
+
+			<div class="col-12 col-md-8">
+
+				<div class="kotak p-4 mb-3">
+
+				<h3 class="mb-3">TENTANG SAYA</h3>
+
+			<p class="mb-0">
+				Halo, nama saya Andravito Brilian Satrya. Saya adalah siswa SMKN 4 Padalarang kelas XII PPLG A. Saya memiliki ketertarikan pada Website Developer dan Data Analyst
 			</div>
 
-			<div class="profil-kanan">
-				<div class="kotak">
-				<h3>TENTANG SAYA</h3>
+			<div class="kotak p-4 mb-3">
+			<h3 class="mb-3">DATA DIRI</h3>
 
-			<p>
-				Halo, nama saya Andravito Brilian Satrya.
-				Saya adalah siswa SMKN 4 Padalarang kelas XII PPLG A.
-				Saya memiliki ketertarikan pada Website Developer
-				dan Data Analyst
-			</p>
+
+			<div class="table-responsive">
+
+			<table class="table table-borderless mb-0">
+
+				<tr>
+					<td><b>Nama</b></td>
+					<td>:</td>
+					<td>Andravito Brilian Satrya</td>
+				</tr>
+				<tr>
+					<td><b>Kelas</b></td>
+					<td>:</td>
+					<td>XII PPLG A</td>
+				</tr>
+				<tr>
+					<td><b>Umur</b></td>
+					<td>:</td>
+					<td>17 tahun</td>
+				</tr>
+				<tr>
+					<td><b>Alamat</b></td>
+					<td>:</td>
+					<td>Padalarang</td>
+				</tr>
+				<tr>
+					<td><b>Hobi</b></td>
+					<td>:</td>
+					<td>Bermain gitar, Membaca novel, mendengarkan musik</td>
+				</tr>
+			</table>
+
 			</div>
+		</div>
 
-			<div class="kotak">
-				<h3>DATA DIRI</h3>
-                <table class="table table-borderless data-diri">
-                    <tr>
-                        <td><b>Nama</b></td>
-                        <td>: Andravito Brilian Satrya</td>
-                    </tr>
-                    <tr>
-                        <td><b>Kelas</b></td>
-                        <td>: XII PPLG A</td>
-                    </tr>
-                    <tr>
-                        <td><b>Umur</b></td>
-                        <td>: 17 Tahun</td>
-                    </tr>
-                    <tr>
-                        <td><b>Alamat</b></td>
-                        <td>: Padalarang</td>
-                    </tr>
-                    <tr>
-                        <td><b>Hobi</b></td>
-                        <td>: Bermain gitar, Membaca novel, Mendengarkan musik</td>
-                    </tr>
-                </table>
-			</div>
-
-			<div class="kotak">
-				<h3>CITA-CITA</h3>
-				<p>
-					Saya ingin menjadi Data Analyst.
+			<div class="kotak p-4">
+				<h3 class="mb-3">CITA-CITA</h3>
+				<p class="mb-0">
+					Saya ingin menjadi seorang Data Analyst
 				</p>
 			</div>
 
@@ -80,14 +109,11 @@
 
 	</section>
 
-</div>
    </main>
 
-   <footer class="footer">
+   <footer class="footer text-center py-3">
 	© 2026 Andravito Brilian Satrya
 </footer>
-
-</div>
 
    <div class="lightbox" id="lightbox" onclick="tutupLightbox()">
 	<img src="assets/profile.jpg" alt="Foto Vito">
@@ -95,6 +121,8 @@
 
    
 <script type="text/javascript" src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
