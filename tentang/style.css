@@ -16,57 +16,47 @@ body {
   gap: 12px;
 }
 
+.navbar-custom {
+    background-color: #ffffff;
+    border-bottom: 1px solid #d8e7dc;
+}
+
+.logo-img {
+    height: 42px;
+    width: auto;
+}
+
+.navbar-custom .navbar-brand {
+    color: #315c43;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.navbar-custom .nav-link {
+    color: #315c43;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #244733;
+    color: white;
+    border-radius: 5px;
+}
+
+a.nav_active {
+    background-color: #315c43;
+    border-radius: 5px;
+    color: #ffffff !important;
+}
+
 .logo-area h2 {
   font-size: 15px;
   font-weight: bold;
   margin: 0;
   color: #2e6845;
-}
-
-.header-kanan {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.menu-nav {
-  display: flex;
-  gap: 18px;
-}
-
-.menu-nav a {
-  color: #315c43;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.menu-nav a:hover {
-  color: #6d9b7d;
-}
-
-.menu-nav a.aktif {
-  background-color: #2e6845;
-  color: #ffffff;
-}
-
-.btn-kembali {
-  background-color: #ffffff;
-  color: #2e6845;
-  border: 1px solid #cfe3d5;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.btn-kembali:hover {
-  background-color: #e6f2e9;
 }
 
 .content {
@@ -130,7 +120,7 @@ body {
     text-align: center;
   }
 
-  .header-kanan {
+  .menu-nav {
     width: 100%;
     justify-content: center;
   }
@@ -152,10 +142,5 @@ body {
   .menu-nav a {
     font-size: 12px;
     padding: 6px 10px;
-  }
-
-  .btn-kembali {
-    font-size: 11px;
-    padding: 6px 12px;
   }
 }

@@ -12,22 +12,25 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-  <header class="header">
-    <div class="logo-area">
-    <h2>TENTANG WEBSITE INI</h2>
-    </div>
-
-    <div class="header-kanan">
-      <nav class="menu-nav">
-        <a href="../index.html">HOME</a>
-        <a href="../profil/profil.html">PROFIL</a>
-        <a href="tentang.html" class="aktif">TENTANG</a>
-      </nav>
-      <button type="button" class="btn-kembali" id="btnKembali">
-        ← Kembali ke Home
-      </button>
-    </div>
-  </header>
+  <nav class="navbar navbar-expand-md navbar-custom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="/index.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcIcfrqbjAKBIyu7P6KFLwv_1td39h4StkNrlNgR-ZPtkLsO3Ab74ihn0&s=10"
+                    alt="Logo SMKN 4 Padalarang" class="logo-img">
+                SMKN 4 PADALARANG
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav gap-md-4">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/profil.html">PROFIL</a></li>
+                    <li class="nav-item"><a class="nav-link nav_active" href="tentang.html">TENTANG</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
   <main class="content flex-grow-1">
     <div class="halaman-tentang">
@@ -63,7 +66,8 @@
   </main>
 
   <footer class="footer">
-    © 2026 Website Profil Siswa
+    © 2026 Website WEBSITE PROFIL SISWA
+    
   </footer>
 
   <script src="main.js"></script>
