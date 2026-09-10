@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f8f3;
+  color: #26382d;
+}
+
+.header {
+  width: 100%;
+  min-height: 50px;
+  border-bottom: 1px solid #cfe3d5;
+  background-color: #2e6845;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.header h2 {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.tombol-kembali {
+  background-color: white;
+  color: #2e6845;
+  border: 1px solid #cfe3d5;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.tombol-kembali:hover {
+  background-color: #e6f2e9;
+}
+
+.content {
+  padding: 40px 20px;
+}
+
+.halaman-tentang {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.kotak {
+  border: 1px solid #cfe3d5;
+  border-radius: 8px;
+  padding: 30px 35px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(46, 104, 69, 0.08);
+}
+
+.kotak h3 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #2e6845;
+  text-align: center;
+}
+
+.kotak p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 12px 0;
+}
+
+.footer {
+  border-top: 1px solid #cfe3d5;
+  text-align: center;
+  padding: 14px;
+  font-size: 12px;
+  background-color: white;
+  color: #2e6845;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .kotak {
+    padding: 20px;
+  }
+
+  .kotak h3 {
+    font-size: 17px;
+  }
+
+  .kotak p {
+    font-size: 14px;
+  }
+
+  .header h2 {
+    font-size: 12px;
+  }
+}
