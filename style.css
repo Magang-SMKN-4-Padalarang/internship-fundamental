@@ -19,21 +19,29 @@ body {
 }
 
 .navbar-custom .navbar-brand {
-  color: #315c43;
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: bold;
+    color: #315c43;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .navbar-custom .nav-link {
-  color: #315c43;
-  font-size: 13px;
-  font-weight: bold;
-  transition: 0.3s;
+    color: #315c43;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.navbar-custom .nav-link:hover {
-  color: #6d9b7d;
+.nav-link:hover {
+    background-color: #244733;
+    color: white;
+    border-radius: 5px;
+}
+
+a.nav_active {
+    background-color: #315c43;
+    border-radius: 5px;
+    color: #ffffff !important;
 }
 
 .hero {
