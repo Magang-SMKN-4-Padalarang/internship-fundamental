@@ -1,11 +1,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #26382d;
-
   background-image:
     linear-gradient(#315f4933, #315f4933),
     url("assets/bg4.jpg");
-
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -21,6 +19,7 @@ body::before {
   z-index: -1;
 }
 
+/* NAVBAR */
 .navbar-custom {
   background-color: #ffffff;
   border-bottom: 1px solid #d8e7dc;
@@ -57,6 +56,7 @@ a.nav_active {
   color: #ffffff !important;
 }
 
+/* HERO */
 .hero {
   text-align: center;
   padding: 65px 16px 35px;
@@ -78,13 +78,11 @@ a.nav_active {
 }
 
 .judul-website {
-  font-size: 24px;
-  font-weight: bold;
-  color: #0e3a1f;
   text-align: center;
   margin-bottom: 15px;
 }
 
+/* JUDUL BERITA */
 .judul-daftar {
   font-size: 25px;
   font-weight: 700;
@@ -111,19 +109,6 @@ a.nav_active {
 .kartu-berita .tanggal-berita,
 .kartu-berita .tanggal-berita i {
   text-shadow: none !important;
-}
-
-.gambar-berita {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.gambar-berita:hover {
-  transform: scale(1.02);
 }
 
 .isi-berita {
@@ -155,6 +140,7 @@ a.nav_active {
   margin-bottom: 20px;
 }
 
+
 .btn-lihat {
   background: #315f49;
   color: white;
@@ -171,6 +157,7 @@ a.nav_active {
   transform: translateY(-2px);
 }
 
+
 footer {
   text-align: center;
   font-size: 12px;
@@ -178,6 +165,7 @@ footer {
   border-top: 1px solid #d8e7dc;
   background-color: #ffffff;
 }
+
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -220,7 +208,6 @@ footer {
 .carousel-indicators button {
   background-color: #315f49;
 }
-
 
 
 .modal-berita {
@@ -275,10 +262,6 @@ footer {
     max-width: 90%;
   }
 
-  .gambar-berita {
-    height: 200px;
-  }
-
   .isi-berita {
     padding: 20px;
   }
@@ -311,13 +294,6 @@ footer {
     margin: 4px 0;
   }
 
-  .judul-website {
-    font-size: 24px;
-    font-weight: bold;
-    color: #203f2c;
-    text-align: center;
-  }
-
   .judul-daftar {
     text-align: center;
     font-size: 14px;
@@ -325,64 +301,6 @@ footer {
     letter-spacing: 2px;
     color: #315c43;
     margin: 25px 0;
-  }
-
-  .kartu-siswa {
-    border: 1px solid #d8e7dc;
-    border-radius: 16px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 20px #dce9df;
-    transition: 0.3s;
-    height: 100%;
-  }
-
-  .kartu-siswa:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 14px 28px #d1e1d5;
-  }
-
-  .kartu-siswa img,
-  .foto-placeholder {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 12px 12px 0 0;
-    background-color: #edf5ef;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .foto-placeholder i {
-    font-size: 38px;
-    color: #91b39d;
-  }
-
-  .kartu-siswa .nama {
-    font-weight: bold;
-    font-size: 15px;
-    color: #315c43;
-    margin-bottom: 2px;
-  }
-
-  .kartu-siswa .kelas {
-    font-size: 13px;
-    color: #7a8c80;
-  }
-
-  .btn-lihat {
-    background-color: #315c43;
-    color: #ffffff;
-    border: none;
-    border-radius: 9px;
-    font-size: 13px;
-    transition: 0.3s;
-  }
-
-  .btn-lihat:hover {
-    background-color: #244733;
-    color: #ffffff;
   }
 
   footer {
@@ -393,3 +311,4 @@ footer {
     background-color: #ffffff;
   }
 }
+
