@@ -1,37 +1,239 @@
 body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f3f8f4;
-      color: #26382d;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f8f4;
+  color: #26382d;
+}
+
+.navbar-custom {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d8e7dc;
+}
+
+.logo-img {
+  height: 42px;
+  width: auto;
+}
+
+.navbar-custom .navbar-brand {
+  color: #315c43;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.navbar-custom .nav-link {
+  color: #315c43;
+  font-size: 13px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #6d9b7d;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 16px 35px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  color: #315c43;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 14px;
+  color: #6b7d71;
+  margin: 4px 0;
+}
+
+.judul-website {
+  font-size: 24px;
+  font-weight: bold;
+  color: #203f2c;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.judul-daftar {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #315c43;
+}
+
+.kartu-berita {
+ max-width: 850px;
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(40, 92, 69, 0.12);
+}
+
+.kartu-berita:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px #d1e1d5;
+}
+
+.gambar-berita {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.isi-berita {
+  padding: 18px;
+}
+
+.tanggal-berita {
+  font-size: 14px;
+  color: #7a8c80;
+  margin-bottom: 10px;
+}
+
+.tanggal-berita i {
+  margin-right: 7px;
+    color: #357052;
+}
+
+.isi-berita h3 {
+   font-size: 22px;
+    font-weight: 700;
+    color: #315f49;
+    margin-bottom: 12px;
+}
+
+.isi-berita p {
+  font-size: 15px;
+    line-height: 1.7;
+    color: #68776f;
+    margin-bottom: 20px;
+}
+
+.btn-lihat {
+   background: #315f49;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-lihat:hover {
+   background: #234735;
+    color: white;
+    transform: translateY(-2px);
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #789283;
+  border-top: 1px solid #d8e7dc;
+  background-color: #ffffff;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 7%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #315f49;
+    border-radius: 50%;
+    padding: 20px;
+    background-size: 45%;
+}
+
+.carousel-indicators {
+    position: relative;
+    margin-top: 20px;
+}
+
+.carousel-indicators button {
+    background-color: #315f49;
+}
+
+
+
+.modal-berita {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.modal-header {
+    border-bottom: 1px solid #e8eee9;
+    padding: 20px 25px;
+}
+
+.modal-title {
+    font-weight: 700;
+    color: #315f49;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-gambar {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 18px;
+}
+
+.modal-tanggal {
+    font-size: 14px;
+    color: #718078;
+    margin-bottom: 15px;
+}
+
+.modal-tanggal i {
+    color: #315f49;
+    margin-right: 6px;
+}
+
+#modalIsi {
+    color: #59675f;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+@media (max-width: 768px) {
+
+    .kartu-berita {
+        max-width: 90%;
     }
 
-    .navbar-custom {
-      background-color: #ffffff;
-      border-bottom: 1px solid #d8e7dc;
+    .gambar-berita {
+        height: 200px;
     }
 
-    .logo-img {
-      height: 42px;
-      width: auto;
+    .isi-berita {
+        padding: 20px;
     }
 
-    .navbar-custom .navbar-brand {
-      color: #315c43;
-      font-size: 14px;
-      letter-spacing: 1px;
-      font-weight: bold;
+    .isi-berita h3 {
+        font-size: 19px;
     }
 
-    .navbar-custom .nav-link {
-      color: #315c43;
-      font-size: 13px;
-      font-weight: bold;
-      transition: 0.3s;
+    .isi-berita p {
+        font-size: 14px;
     }
 
-    .navbar-custom .nav-link:hover {
-      color: #6d9b7d;
+    .modal-gambar {
+        height: 210px;
     }
 
+<<<<<<< HEAD
     .hero {
       text-align: center;
       padding: 65px 16px 35px;
@@ -129,3 +331,6 @@ body {
       border-top: 1px solid #d8e7dc;
       background-color: #ffffff;
     }
+=======
+}
+>>>>>>> a70a8bf (update css home, tambah carousel slide berita)
