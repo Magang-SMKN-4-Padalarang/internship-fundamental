@@ -108,9 +108,15 @@ a.nav_active {
 
 .gambar-berita {
   width: 100%;
-  height: 200px;
+  height: 280px;
   object-fit: cover;
   display: block;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.gambar-berita:hover {
+  transform: scale(1.02);
 }
 
 .isi-berita {
@@ -212,9 +218,9 @@ footer {
 
 .modal-gambar {
   width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 15px;
+  height: auto;
+  display: block;
+  object-fit: contain;
   margin-bottom: 18px;
 }
 
