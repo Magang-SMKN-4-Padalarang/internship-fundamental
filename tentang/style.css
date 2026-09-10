@@ -6,42 +6,71 @@ body {
 }
 
 .header {
-  width: 100%;
-  min-height: 50px;
-  border-bottom: 1px solid #cfe3d5;
-  background-color: #2e6845;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  box-sizing: border-box;
+  align-items: center;
+  padding: 14px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d8e7dc;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
-.header h2 {
-  font-size: 13px;
+.logo-area h2 {
+  font-size: 15px;
   font-weight: bold;
   margin: 0;
-  color: white;
+  color: #2e6845;
 }
 
-.tombol-kembali {
-  background-color: white;
+.header-kanan {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 18px;
+}
+
+.menu-nav a {
+  color: #315c43;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.menu-nav a:hover {
+  color: #6d9b7d;
+}
+
+.menu-nav a.aktif {
+  background-color: #2e6845;
+  color: #ffffff;
+}
+
+.btn-kembali {
+  background-color: #ffffff;
   color: #2e6845;
   border: 1px solid #cfe3d5;
-  padding: 6px 12px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 12px;
+  font-weight: bold;
 }
 
-.tombol-kembali:hover {
+.btn-kembali:hover {
   background-color: #e6f2e9;
 }
 
 .content {
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
 .halaman-tentang {
@@ -56,6 +85,7 @@ body {
   padding: 30px 35px;
   background-color: white;
   box-shadow: 0 4px 10px rgba(46, 104, 69, 0.08);
+  text-align: center;
 }
 
 .kotak h3 {
@@ -63,13 +93,26 @@ body {
   margin-top: 0;
   margin-bottom: 16px;
   color: #2e6845;
-  text-align: center;
 }
 
 .kotak p {
   font-size: 15px;
   line-height: 1.7;
   margin: 12px 0;
+  text-align: left;
+}
+
+.sosial-media {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.ikon-sosial {
+  color: #2e6845;
+  font-size: 22px;
+  text-decoration: none;
 }
 
 .footer {
@@ -81,7 +124,18 @@ body {
   color: #2e6845;
 }
 
-/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-kanan {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 480px) {
   .kotak {
     padding: 20px;
@@ -95,7 +149,13 @@ body {
     font-size: 14px;
   }
 
-  .header h2 {
+  .menu-nav a {
     font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .btn-kembali {
+    font-size: 11px;
+    padding: 6px 12px;
   }
 }
