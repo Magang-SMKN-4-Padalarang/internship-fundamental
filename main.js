@@ -1,20 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const galleryPhotos = document.querySelectorAll(".galleryPhoto");
+const modalBerita = document.getElementById("modalBerita");
 
-    galleryPhotos.forEach(function (photo) {
-        photo.addEventListener("click", function (event) {
-            event.preventDefault();
+modalBerita.addEventListener("show.bs.modal", function (event) {
 
-            const lightbox = GLightbox({
-                elements: [
-                    {
-                        href: photo.src,
-                        type: "image"
-                    }
-                ]
-            });
+    const tombol = event.relatedTarget;
 
-            lightbox.open();
-        });
-    });
+    const judul = tombol.getAttribute("data-judul");
+    const tanggal = tombol.getAttribute("data-tanggal");
+    const gambar = tombol.getAttribute("data-gambar");
+    const isi = tombol.getAttribute("data-isi");
+
+    document.getElementById("modalJudul").textContent = judul;
+    document.getElementById("modalTanggal").textContent = tanggal;
+    document.getElementById("modalGambar").src = gambar;
+    document.getElementById("modalIsi").textContent = isi;
+
 });
