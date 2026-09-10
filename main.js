@@ -8,6 +8,9 @@ modalBerita.addEventListener("show.bs.modal", function (event) {
     const tanggal = tombol.getAttribute("data-tanggal");
     const gambar = tombol.getAttribute("data-gambar");
     const isi = tombol.getAttribute("data-isi");
+    const lightbox = GLightbox({
+  selector: '.glightbox'
+});
 
     document.getElementById("modalJudul").textContent = judul;
     document.getElementById("modalTanggal").textContent = tanggal;

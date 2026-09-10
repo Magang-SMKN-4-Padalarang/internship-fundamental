@@ -1,7 +1,7 @@
 const btnKembali = document.getElementById("btnKembali");
 
 btnKembali.addEventListener("click", function () {
-    window.location.href = "../index.html";
+    window.location.href = "../profil/profil.html";
 });
 
 document.addEventListener('DOMContentLoaded', function () {
