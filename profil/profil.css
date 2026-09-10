@@ -28,13 +28,13 @@ body {
     transition: 0.3s;
 }
 
-.navbar-custom .nav-link:hover {
+.nav-link:hover {
     background-color: #244733;
     color: white;
     border-radius: 5px;
 }
 
-ul li a.nav_active {
+a.nav_active {
     background-color: #315c43;
     border-radius: 5px;
     color: #ffffff !important;
