@@ -1,7 +1,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f3f8f4;
   color: #26382d;
+  background-image: url("assets/bg4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .navbar-custom {
@@ -65,11 +69,11 @@ body {
 }
 
 .kartu-berita {
- max-width: 850px;
-    background: white;
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(40, 92, 69, 0.12);
+  max-width: 850px;
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(40, 92, 69, 0.12);
 }
 
 .kartu-berita:hover {
@@ -96,37 +100,37 @@ body {
 
 .tanggal-berita i {
   margin-right: 7px;
-    color: #357052;
+  color: #357052;
 }
 
 .isi-berita h3 {
-   font-size: 22px;
-    font-weight: 700;
-    color: #315f49;
-    margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #315f49;
+  margin-bottom: 12px;
 }
 
 .isi-berita p {
   font-size: 15px;
-    line-height: 1.7;
-    color: #68776f;
-    margin-bottom: 20px;
+  line-height: 1.7;
+  color: #68776f;
+  margin-bottom: 20px;
 }
 
 .btn-lihat {
-   background: #315f49;
-    color: white;
-    border: none;
-    padding: 11px 20px;
-    border-radius: 10px;
-    font-size: 14px;
-    transition: 0.3s;
+  background: #315f49;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
 .btn-lihat:hover {
-   background: #234735;
-    color: white;
-    transform: translateY(-2px);
+  background: #234735;
+  color: white;
+  transform: translateY(-2px);
 }
 
 footer {
@@ -139,100 +143,101 @@ footer {
 
 .carousel-control-prev,
 .carousel-control-next {
-    width: 7%;
+  width: 7%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #315f49;
-    border-radius: 50%;
-    padding: 20px;
-    background-size: 45%;
+  background-color: #315f49;
+  border-radius: 50%;
+  padding: 20px;
+  background-size: 45%;
 }
 
 .carousel-indicators {
-    position: relative;
-    margin-top: 20px;
+  position: relative;
+  margin-top: 20px;
 }
 
 .carousel-indicators button {
-    background-color: #315f49;
+  background-color: #315f49;
 }
 
 
 
 .modal-berita {
-    border: none;
-    border-radius: 20px;
-    overflow: hidden;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .modal-header {
-    border-bottom: 1px solid #e8eee9;
-    padding: 20px 25px;
+  border-bottom: 1px solid #e8eee9;
+  padding: 20px 25px;
 }
 
 .modal-title {
-    font-weight: 700;
-    color: #315f49;
+  font-weight: 700;
+  color: #315f49;
 }
 
 .modal-body {
-    padding: 25px;
+  padding: 25px;
 }
 
 .modal-gambar {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 18px;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 18px;
 }
 
 .modal-tanggal {
-    font-size: 14px;
-    color: #718078;
-    margin-bottom: 15px;
+  font-size: 14px;
+  color: #718078;
+  margin-bottom: 15px;
 }
 
 .modal-tanggal i {
-    color: #315f49;
-    margin-right: 6px;
+  color: #315f49;
+  margin-right: 6px;
 }
 
 #modalIsi {
-    color: #59675f;
-    font-size: 16px;
-    line-height: 1.8;
+  color: #59675f;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 
 @media (max-width: 768px) {
 
-    .kartu-berita {
-        max-width: 90%;
-    }
+  .kartu-berita {
+    max-width: 90%;
+  }
 
-    .gambar-berita {
-        height: 200px;
-    }
+  .gambar-berita {
+    height: 200px;
+  }
 
-    .isi-berita {
-        padding: 20px;
-    }
+  .isi-berita {
+    padding: 20px;
+  }
 
-    .isi-berita h3 {
-        font-size: 19px;
-    }
+  .isi-berita h3 {
+    font-size: 19px;
+  }
 
-    .isi-berita p {
-        font-size: 14px;
-    }
+  .isi-berita p {
+    font-size: 14px;
+  }
 
-    .modal-gambar {
-        height: 210px;
-    }
+  .modal-gambar {
+    height: 210px;
+  }
 
+<<<<<<< HEAD
     .hero {
       text-align: center;
       padding: 65px 16px 35px;
@@ -331,3 +336,6 @@ footer {
       background-color: #ffffff;
     }
   }
+=======
+}
+>>>>>>> cb66158a0b66b6d37cd9a763c36f1dd08be2bd8f
