@@ -92,7 +92,7 @@ a.nav_active {
 }
 
 .kartu-berita {
-  max-width: 850px;
+  max-width: 500px;;
   background: white;
   border-radius: 22px;
   overflow: hidden;
@@ -102,6 +102,13 @@ a.nav_active {
 .kartu-berita:hover {
   transform: translateY(-8px);
   box-shadow: 0 14px 28px #d1e1d5;
+}
+
+.gambar-berita{
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
 }
 
 .kartu-berita h3,
