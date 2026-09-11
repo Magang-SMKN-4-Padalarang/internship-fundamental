@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   lightbox.addEventListener('click', tutupLightbox);
 
   btnKembali.addEventListener('click', function () {
-    window.location.href = '../index.html';
+    window.location.href = '../profil/profil.html';
   });
 
 });

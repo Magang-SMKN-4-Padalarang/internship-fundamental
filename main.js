@@ -1,20 +1,30 @@
-const modalBerita = document.getElementById("modalBerita");
+document.addEventListener("DOMContentLoaded", function () {
 
-modalBerita.addEventListener("show.bs.modal", function (event) {
+  const modalBerita = document.getElementById("modalBerita");
 
-    const tombol = event.relatedTarget;
+  modalBerita.addEventListener("show.bs.modal", function (event) {
 
-    const judul = tombol.getAttribute("data-judul");
-    const tanggal = tombol.getAttribute("data-tanggal");
-    const gambar = tombol.getAttribute("data-gambar");
-    const isi = tombol.getAttribute("data-isi");
-    const lightbox = GLightbox({
-  selector: '.glightbox'
-});
+
+    const button = event.relatedTarget;
+
+
+    const judul = button.getAttribute("data-judul");
+    const tanggal = button.getAttribute("data-tanggal");
+    const gambar = button.getAttribute("data-gambar");
+    const isi = button.getAttribute("data-isi");
+
+
 
     document.getElementById("modalJudul").textContent = judul;
     document.getElementById("modalTanggal").textContent = tanggal;
-    document.getElementById("modalGambar").src = gambar;
     document.getElementById("modalIsi").textContent = isi;
+
+    const modalGambar = document.getElementById("modalGambar");
+
+    modalGambar.src = gambar;
+
+    modalGambar.alt = judul;
+
+  });
 
 });
