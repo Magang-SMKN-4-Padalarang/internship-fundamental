@@ -19,7 +19,6 @@ body::before {
   z-index: -1;
 }
 
-/* NAVBAR */
 .navbar-custom {
   background-color: #ffffff;
   border-bottom: 1px solid #d8e7dc;
