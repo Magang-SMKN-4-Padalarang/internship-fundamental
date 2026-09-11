@@ -91,16 +91,23 @@ a.nav_active {
 }
 
 .kartu-berita {
-  max-width: 850px;
+  max-width: 420px;
   background: white;
-  border-radius: 22px;
+  border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(40, 92, 69, 0.12);
 }
 
+
 .kartu-berita:hover {
   transform: translateY(-8px);
   box-shadow: 0 14px 28px #d1e1d5;
+}
+
+.gambar-berita {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .kartu-berita h3,
@@ -111,32 +118,32 @@ a.nav_active {
 }
 
 .isi-berita {
-  padding: 18px;
+  padding: 14px 16px;
 }
 
 .tanggal-berita {
-  font-size: 14px;
+  font-size: 12px;
   color: #7a8c80;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .tanggal-berita i {
-  margin-right: 7px;
+  margin-right: 5px;
   color: #357052;
 }
 
 .isi-berita h3 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   color: #315f49;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .isi-berita p {
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.6;
   color: #68776f;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 
@@ -144,9 +151,9 @@ a.nav_active {
   background: #315f49;
   color: white;
   border: none;
-  padding: 11px 20px;
-  border-radius: 10px;
-  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 12px;
   transition: 0.3s;
 }
 
@@ -176,11 +183,11 @@ footer {
 }
 
 .carousel-control-prev {
-  left: -10px;
+  left: 250px;
 }
 
 .carousel-control-next {
-  right: -10px;
+  right: 250px;
 }
 
 .carousel-control-prev-icon,
@@ -250,7 +257,7 @@ footer {
 
 #modalIsi {
   color: #59675f;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.8;
 }
 
