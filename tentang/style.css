@@ -38,6 +38,7 @@ body {
     font-size: 13px;
     font-weight: bold;
     transition: 0.3s;
+    padding: 12px;
 }
 
 .nav-link:hover {
