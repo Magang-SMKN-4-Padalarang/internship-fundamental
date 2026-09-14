@@ -56,7 +56,7 @@ a.nav_active {
   color: #ffffff !important;
 }
 
-/* HERO */
+
 .hero {
   text-align: center;
   padding: 65px 16px 35px;
@@ -183,14 +183,6 @@ footer {
   opacity: 1;
 }
 
-.carousel-control-prev {
-  left: 250px;
-}
-
-.carousel-control-next {
-  right: 250px;
-}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   width: 45px;
@@ -215,7 +207,6 @@ footer {
 .carousel-indicators button {
   background-color: #315f49;
 }
-
 
 .modal-berita {
   border: none;
@@ -292,12 +283,12 @@ footer {
 
   .hero h1 {
     font-size: 28px;
-    color: #315c43;
+    color: #ffffff;
   }
 
   .hero p {
     font-size: 14px;
-    color: #6b7d71;
+    color: #ffffff;
     margin: 4px 0;
   }
 
@@ -306,9 +297,29 @@ footer {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #315c43;
+    color: #ffffff;
     margin: 25px 0;
   }
+
+  .carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev {
+    left: 5px;
+}
+
+.carousel-control-next {
+    right: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+}
 
   footer {
     text-align: center;
