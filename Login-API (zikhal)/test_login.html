@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Login</title>
+</head>
+<body>
+    <h2>Test Login API</h2>
+    <input type="text" id="username" placeholder="Username"><br><br>
+    <input type="password" id="password" placeholder="Password"><br><br>
+    <button onclick="login()">Login</button>
+    <pre id="hasil"></pre>
+
+    <script>
+        function login() {
+            document.getElementById('hasil').textContent = "Mengirim...";
+
+            fetch('login.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    username: document.getElementById('username').value,
+                    password: document.getElementById('password').value
+                })
+            })
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error("Server merespon status " + res.status);
+                }
+                return res.json();
+            })
+            .then(data => {
+                document.getElementById('hasil').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(err => {
+                document.getElementById('hasil').textContent = "GAGAL: " + err.message;
+            });
+        }
+    </script>
+</body>
+</html>
