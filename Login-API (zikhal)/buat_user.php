@@ -1,12 +1,13 @@
 <?php
+// ==== SETUP RESPONSE & KONEKSI ====
 header("Content-Type: application/json");
 include "koneksi.php";
 
-// ==== GANTI username & password percobaan di sini kalau perlu ====
+// ==== GANTI username & password ====
 $username = "widi";
 $password = "rahasia123";
 
-// Cek dulu supaya tidak dobel kalau file ini kelupaan dijalankan 2x
+// ==== CEK APAKAH USERNAME SUDAH DIPAKAI ====
 $stmt = $conn->prepare("SELECT id FROM users WHERE username = ?");
 $stmt->bind_param("s", $username);
 $stmt->execute();
@@ -20,12 +21,15 @@ if ($result->num_rows > 0) {
     exit;
 }
 
+// ==== HASH PASSWORD SEBELUM DISIMPAN ====
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
+// ==== SIMPAN USER BARU KE DATABASE ====
 $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
 $stmt->bind_param("ss", $username, $hashedPassword);
 $stmt->execute();
 
+// ==== KIRIM RESPONSE HASIL ====
 echo json_encode([
     "status" => "success",
     "message" => "User percobaan berhasil dibuat",
