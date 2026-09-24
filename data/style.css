@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #f3faf6;
+  color: #26382d;
   background-image:
     linear-gradient(#315f4933, #315f4933),
     url("assets/bg4.jpg");
@@ -56,7 +56,7 @@ a.nav_active {
   color: #ffffff !important;
 }
 
-
+/* HERO */
 .hero {
   text-align: center;
   padding: 65px 16px 35px;
@@ -183,6 +183,14 @@ footer {
   opacity: 1;
 }
 
+.carousel-control-prev {
+  left: 250px;
+}
+
+.carousel-control-next {
+  right: 250px;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   width: 45px;
@@ -207,6 +215,7 @@ footer {
 .carousel-indicators button {
   background-color: #315f49;
 }
+
 
 .modal-berita {
   border: none;
@@ -283,12 +292,12 @@ footer {
 
   .hero h1 {
     font-size: 28px;
-    color: #ffffff;
+    color: #315c43;
   }
 
   .hero p {
     font-size: 14px;
-    color: #ffffff;
+    color: #6b7d71;
     margin: 4px 0;
   }
 
@@ -297,29 +306,9 @@ footer {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #ffffff;
+    color: #315c43;
     margin: 25px 0;
   }
-
-  .carousel-control-prev,
-.carousel-control-next {
-    width: 40px;
-    height: 40px;
-}
-
-.carousel-control-prev {
-    left: 5px;
-}
-
-.carousel-control-next {
-    right: 5px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 40px;
-    height: 40px;
-}
 
   footer {
     text-align: center;
