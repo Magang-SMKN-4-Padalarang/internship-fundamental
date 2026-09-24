@@ -34,7 +34,7 @@ db.connect((err) => {
 });
 
 
-// API UTAMA (bisa dipakai untuk mengecek apakah server/API kamu sedang berjalan)
+// API UTAMA (bisa dipakai untuk mengecek apakah server/API sedang berjalan)
 app.get("/", (req, res) => {
     res.json({
         message: "API Login berhasil berjalan!"
@@ -57,7 +57,7 @@ app.get("/users", (req, res) => {
 });
 
 
-// API LOGIN + JWT (endpoint API login yang nantinya melakukan pengecekan username + password dan, kalau benar, membuat JWT kenapa post krn client mengirim data login ke server//
+// API LOGIN + JWT (endpoint API login yang nantinya melakukan pengecekan username + password dan, kalau benar, membuat JWT. kenapa post krn client mengirim data login ke server
 app.post("/login", (req, res) => {
 
     const { username, password } = req.body;
