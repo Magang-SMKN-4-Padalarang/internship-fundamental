@@ -42,20 +42,91 @@ app.get("/", (req, res) => {
 });
 
 // API USERS
-app.get("/users", (req, res) => {
+//verifytoken untuk memastikan user sudah login dan memiliki JWT
+app.get("/users", verifyToken, (req, res) => {
+
+    //query untuk mengambil semua data dari tb users
     const sql = "SELECT * FROM users";
 
     db.query(sql, (err, result) => {
+
+        //jika terjadi error saat mengambil data dari sb
         if (err) {
             return res.status(500).json({
                 message: "Gagal mengambil data"
             });
         }
 
+        //jika berhasil, kirim semua data user dlm bentuk JSON
         res.json(result);
     });
 });
 
+app.post("/users", verifyToken, (req, res) => {
+    const { username, password } = req.body;
+
+    const sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+
+    db.query(sql, [username, password], (err, result) => {
+
+        if (err) {
+            return res.status(500).json({
+                message: "Gagal menambahkan user"
+            });
+        }
+
+        res.json({
+            message: "User berhasil ditambahkan"
+        });
+
+    });
+});
+
+app.put("/users/:id", verifyToken, (req, res) => {
+
+    const { username, password } = req.body;
+    const { id } = req.params;
+
+    const sql = "UPDATE users SET username = ?, password = ? WHERE id = ?";
+
+    db.query(sql, [username, password, id], (err, result) => {
+
+        if (err) {
+            console.error("ERROR UPDATE:", err);
+
+            return res.status(500).json({
+                message: "Gagal mengubah user"
+            });
+        }
+
+        res.json({
+            message: "User berhasil diubah"
+        });
+
+    });
+
+});
+
+app.delete("/users/:id", verifyToken, (req, res) => {
+
+    const { id } = req.params;
+
+    const sql = "DELETE FROM users WHERE id = ?";
+
+    db.query(sql, [id], (err, result) => {
+
+        if (err) {
+            return res.status(500).json({
+                message: "Gagal menghapus user"
+            });
+        }
+
+        res.json({
+            message: "User berhasil dihapus"
+        });
+    });
+
+});
 
 // API LOGIN + JWT (endpoint API login yang nantinya melakukan pengecekan username + password dan, kalau benar, membuat JWT. kenapa post krn client mengirim data login ke server
 app.post("/login", (req, res) => {
